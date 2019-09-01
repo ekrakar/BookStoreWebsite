@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title%} View Account {% endblock %}
+
+{% block content %}
+<h1>View Account</h1> 
+<p>Username: {{ user }}</p>
+<p>First name: {{ user.first_name }}</p>
+<p>Last name: {{ user.last_name }}</p>
+<p>Email: {{ user.email }}</p>
+<p>StudentID: {{user.user_info.student_ID}}</p>
+<p>Mailing Address: {{user.user_info.mailing_Address}}</p>
+<p>Billing Address: {{user.user_info.billing_Address}}</p>
+<p>Credit Card Type: {{user.user_info.credit_Card_Type}}</p>
+<p>Credit Card Number: {{user.user_info.credit_Card_Number}}</p>
+<p>Expiration Date: {{user.user_info.expiration_Date}}</p>
+{% endblock %}

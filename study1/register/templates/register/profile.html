@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title%} Account Profile {% endblock %}
+
+{% block content %}
+<h1>View Account</h1> 
+<p>Username: {{ user }}</p>
+<p>First name: {{ user.first_name }}</p>
+<p>Last name: {{ user.last_name }}</p>
+<p>Email: {{ user.email }}</p>
+<p>Mailing Address: {{info.mailing_Address}}</p>
+<p>Billing Address: {{info.billing_Address}}</p>
+<p>Credit Card Type: {{cards.get_credit_Card_Type_display}}</p>
+<p>Credit Card Number: {{cards.credit_Card_Number}}</p>
+<p>Expiration Date: {{cards.expiration_Date}}</p>
+    <p><a href="{% url 'main:update-profile' %}">Update Information</a></p>
+{% endblock %}
